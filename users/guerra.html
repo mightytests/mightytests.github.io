@@ -9,6 +9,13 @@
     gtag('js', new Date());
     gtag('config', 'G-WWBT750N11'); <!-- GA4 Andre Guerra -->
     gtag('config', 'UA-186907720-1'); <!-- UA Andre Guerra -->
+      
+    function buttonClick() {
+      gtag('event', 'TestButton', {
+        'event_category': "button press",
+        'event_label': "test button"
+      })
+    }
   </script>
   <title>My First HTML</title>
   <meta charset="UTF-8">
@@ -17,11 +24,7 @@
 
 <h1>Universal Analytics </h1>
   <form>
-    <input type="button" value="Enviar Evento para Analytics" onclick=gtag('event', 'click', {
-  'event_category': 'button_press',
-  'event_label': 'send_data',
-  'value': 1
-})>
+    <input type="button" value="Enviar Evento para Analytics" onclick=buttonClick()>
   </form>
 
 <p>My first paragraph.</p>
