@@ -8,9 +8,16 @@
 
   gtag('config', 'G-97RZBB0BT6');
   gtag('config', 'UA-186907720-7');
+
+  function buttonClick() {
+    gtag('event', 'TestButton', {
+      'event_category': "button press",
+      'event_label': "test button"
+    })
+  }
 </script>
 </head>
-
 <body>
     Hello world!
+    <button onclick=buttonClick()>Test Button</button>
 </body>
