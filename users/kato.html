@@ -8,13 +8,6 @@
 
     gtag('config', 'G-97RZBB0BT6');
     gtag('config', 'UA-186907720-7');
-
-    function buttonClick() {
-      gtag('event', 'TestButton', {
-        'event_category': "button press",
-        'event_label': "test button"
-      })
-    }
   </script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -23,6 +16,7 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5WZ5ZB9');</script>
   <!-- End Google Tag Manager -->
+  <script>dataLayer = [];</script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -32,5 +26,6 @@
 
     Hello world!
 
-    <button class="testbutton">Test Button</button>
-</body>
+    <button class="testbutton" onclick="dataLayer.push({ category: 'teste 1' })">Test Button</button>
+    <button class="testbutton" onclick="dataLayer.push({ category: 'teste 2' })">Test Button 2</button>
+  </body>
