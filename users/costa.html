@@ -8,9 +8,17 @@
 
     gtag('config', 'UA-186907720-5');
   </script>
+    <script>
+        buttonClick = ()=>{
+            gtag('event', "click", {
+            'event_category': "Button click",
+            'event_label': "Hello button",
+            'value': 1
+            });
+    </script>
 </head>
 <h1>Olá</h1>
-<button>Button 1</button>
+<button onclick="buttonClick()">Button 1</button>
 <button>Link 2</button>
  <form>
   <label for="fname">Nome</label><br>
