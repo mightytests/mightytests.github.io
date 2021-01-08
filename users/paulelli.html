@@ -9,6 +9,15 @@
       gtag('js', new Date());
 
       gtag('config', 'G-YLNPTDV6J4');
+      gtag('config', 'UA-186907720-6');
+	    
+      function buttonClick() {
+	    gtag('event', 'Captura', {
+	      'event_category': "button press",
+	      'event_label': "Captura de email"
+	    })
+  }
+	    
     </script>
 
 		<title>Fabiano - Página de testes do Google analytics inicial</title>
@@ -24,7 +33,7 @@
         <label for="fname">e-mail:</label>
         <input type="text" id="fname" name="fname"><br><br>
       </form>
-      <button type="submit" form="form1" value="Submit" formaction="fabiano-obrigado.html">Enviar</button>
+      <button type="submit" form="form1" value="Submit" formaction="https://www.google.com.br">Enviar</button>
     </div>
 	</body>
 
