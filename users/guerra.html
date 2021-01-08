@@ -16,13 +16,15 @@
 <body>
 
 <h1>Universal Analytics </h1>
-<input type="button" value="Enviar Evento para Analytics" onclick=
-  ga('send', {
-  hitType: 'event',
-  eventCategory: 'Button',
-  eventAction: 'Click',
-  eventLabel: 'Data Sending'
-});>
+  <form>
+    <input type="button" value="Enviar Evento para Analytics" onclick=
+      ga('send', {
+      hitType: 'event',
+      eventCategory: 'Button',
+      eventAction: 'Click',
+      eventLabel: 'Data Sending'
+    });>
+  </form>
 
 <p>My first paragraph.</p>
 
