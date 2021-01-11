@@ -13,6 +13,7 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <form>
+    <label for="Curso">Curso:</label><br>
     <select name="curso" id="curso">
       <option value="Sistemas de Informação">Sistemas de Informação</option>
       <option value="Ciência da Computação">Ciência da Computação</option><br>
@@ -20,12 +21,19 @@
       <option value="Física">Física</option><br>
     </select><br>
     
+    <label for="periodo">Períodos:</label><br>
     <input type="radio" id="manha" name="periodo" value="manha">
     <label for="manha">Manha</label><br>
-    <input type="radio" id="female" name="periodo" value="tarde">
+    <input type="radio" id="tarde" name="periodo" value="tarde">
     <label for="tarde">Tarde</label><br>
     <input type="radio" id="other" name="periodo" value="noite">
     <label for="noite">Noite</label><br>
+    
+    <label for="modalidade">Modalidade:</label><br>
+    <input type="radio" id="ead" name="modalidade" value="ead">
+    <label for="ead">EAD</label><br>
+    <input type="radio" id="presencial" name="modalidade" value="presencial">
+    <label for="presencial">Presencial</label><br>
     
     <label for="lname">Last name:</label><br>
     <input type="text" id="lname" name="lname">
