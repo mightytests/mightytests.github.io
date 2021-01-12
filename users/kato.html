@@ -1,4 +1,20 @@
 <head>
+  <script>
+    function submitForm() {
+      let curso = document.getElementById("curso").value
+      let preco = document.getElementById("preco").value
+      let modalidade = document.querySelector('input[name="modalidade"]:checked').value;
+      let periodo = document.querySelector('input[name="periodo"]:checked').value;
+      let data_ingresso = document.getElementById("data_ingresso").value
+      dataLayer.push({
+        'curso': curso,
+        'preco': preco,
+        'modalidade': modalidade,
+        'periodo': periodo,
+        'data_ingresso': data_ingresso
+      })
+    }
+  </script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -12,9 +28,37 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WZ5ZB9"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-
-    Hello world!
-
     <button class="testbutton" onclick="dataLayer.push({ category: 'teste 1' })">Test Button</button>
     <button class="testbutton" onclick="dataLayer.push({ category: 'teste 2' })">Test Button 2</button>
-  </body>
+    <form id="cursos" onsubmit="submitForm()">
+      <label for="Curso">Curso:</label><br>
+      <select name="curso" id="curso">
+        <option value="Sistemas de Informação">Sistemas de Informação</option>
+        <option value="Ciência da Computação">Ciência da Computação</option><br>
+        <option value="Direito">Direito</option><br>
+        <option value="Física">Física</option><br>
+      </select><br>
+      
+      <label for="preco">Preco:</label><br>
+      <input type="text" id="preco" name="preco"><br>
+      
+      <label for="periodo" id="periodo">Períodos:</label><br>
+      <input type="radio" id="manha" name="periodo" value="manha">
+      <label for="manha">Manha</label><br>
+      <input type="radio" id="tarde" name="periodo" value="tarde">
+      <label for="tarde">Tarde</label><br>
+      <input type="radio" id="other" name="periodo" value="noite">
+      <label for="noite">Noite</label><br>
+      
+      <label for="modalidade">Modalidade:</label><br>
+      <input type="radio" id="ead" name="modalidade" value="ead">
+      <label for="ead">EAD</label><br>
+      <input type="radio" id="presencial" name="modalidade" value="presencial">
+      <label for="presencial">Presencial</label><br>
+      
+      <label for="data_ingresso">Data de Ingresso:</label>
+      <input type="date" id="data_ingresso" name="data_ingresso"><br>
+      
+      <input type="submit" value="Submit">
+    </form>
+</body>
