@@ -27,19 +27,17 @@
 		</script>
 		<!-- End Google Tag Manager -->
 		<title> Guilherme Masao Tsuyukubo </title>
-		<script>
-			function sendInfo(){
-				const curso = curso.value;
-				const preco = preco.value;
-				const periodo = document.querySelector('input[name="periodo"]:checked').value;
-				const modalidade = document.querySelector('input[name="modalidade"]:checked').value;
-				const ingresso = data_ingresso.value;
-				
-				const teste = {'curso': curso, 'periodo' : periodo, 'modalidade' : modalidade, 'ingresso': ingresso};
-				console.log(teste);
-				dataLayer.push({'curso': curso, 'periodo' : periodo, 'modalidade' : modalidade, 'ingresso': ingresso})
-			}
-		</script>
+		 <script>
+    			formSubmit = () =>{
+          			const elements = document.getElementById("form").elements;
+          			let obj ={};
+          			for(let i = 0 ; i < elements.length ; i++){
+            			let item = elements.item(i);
+				    obj[item.name] = item.value;
+				  }
+				  console.log(obj)
+			    }
+		 </script>
 	</head>
 
 	<body>
@@ -78,7 +76,7 @@
     				<label for="presencial">Presencial</label><br>
     
     			<label for="data_ingresso">Data de Ingresso:</label>
-    				<input type="date" id="data_ingresso" name="data_ingresso"><br>
+    				<input type="date" id="ingresso" name="ingresso"><br>
     
     			<input type="submit" value="Submit">
     
