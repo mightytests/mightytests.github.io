@@ -16,7 +16,13 @@
 
 	<script>
 		function sendForm(){
-			const formulario = document.getElementById("form");
+			const curso = curso.value;
+			const preco = preco.value;
+			const periodo = document.querySelector('input[name="periodo"]:checked').value;
+			const modalidade = document.querySelector('input[name="modalidade"]:checked').value;
+
+			const teste = {'curso': curso};
+			console.log(teste)
 		}
 	</script>
 
