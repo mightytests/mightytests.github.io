@@ -24,6 +24,19 @@
   <!-- End Google Tag Manager -->
   <title>My HTML</title>
   <meta charset="UTF-8">
+  
+  <script>
+    sendForm = () =>{
+          const elements = document.getElementById("form").elements;
+          let obj ={};
+          for(let i = 0 ; i < elements.length-1 ; i++){
+          let item = elements.item(i);
+          obj[item.name] = item.value;
+        }
+        console.log(obj);
+        dataLayer.push(obj);
+  }
+  
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -31,7 +44,7 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <h1>GTM Form </h1>
-  <form>
+  <form onsubmit="sendForm()" id="form">
     <label for="Curso">Curso:</label><br>
     <select name="curso" id="curso">
       <option value="Sistemas de Informação">Sistemas de Informação</option>
@@ -57,8 +70,8 @@
     <input type="radio" id="presencial" name="modalidade" value="presencial">
     <label for="presencial">Presencial</label><br>
 
-    <label for="data_ingresso">Data de Ingresso:</label>
-    <input type="date" id="data_ingresso" name="data_ingresso"><br>
+    <label for="ingresso">Data de Ingresso:</label>
+    <input type="date" id="ingresso" name="ingresso"><br>
 
     <input type="submit" value="Submit" onclick=>
   </form>
