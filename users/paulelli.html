@@ -14,13 +14,19 @@
 		<title>Fabiano - Página de testes do Google analytics inicial</title>
 	</head>
 
+	<script>
+		function sendForm(){
+			const formulario = document.getElementById("form");
+		}
+	</script>
+
 	<body>
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52N6GCQ"
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
-		
-		<form>
+
+		<form onsubmit="sendForm()" id="form">
 			<label for="Curso">Curso:</label><br>
 			<select name="curso" id="curso">
 			  <option value="Sistemas de Informação">Sistemas de Informação</option>
@@ -32,7 +38,7 @@
 			<label for="preco">Preco:</label><br>
 			<input type="text" id="preco" name="preco"><br>
 			
-			<label for="periodo">Períodos:</label><br>
+			<label for="periodo" value="testeradio">Períodos:</label><br>
 			<input type="radio" id="manha" name="periodo" value="manha">
 			<label for="manha">Manha</label><br>
 			<input type="radio" id="tarde" name="periodo" value="tarde">
