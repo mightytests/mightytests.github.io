@@ -15,16 +15,16 @@
 	</head>
 
 	<script>
-		function sendForm(){
-			const curso = curso.value;
-			const preco = preco.value;
-			const periodo = document.querySelector('input[name="periodo"]:checked').value;
-			const modalidade = document.querySelector('input[name="modalidade"]:checked').value;
-
-			const teste = {'curso': curso};
-			console.log(teste)
+		sendForm = () =>{
+			  const elements = document.getElementById("form").elements;
+			  let obj ={};
+			  for(let i = 0 ; i < elements.length ; i++){
+				let item = elements.item(i);
+				obj[item.name] = item.value;
+			  }
+			  console.log(obj)
 		}
-	</script>
+	  </script>
 
 	<body>
 		<!-- Google Tag Manager (noscript) -->
