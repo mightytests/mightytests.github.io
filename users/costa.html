@@ -31,7 +31,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     formSubmit = () =>{
           const elements = document.getElementById("form").elements;
           let obj ={};
-          for(let i = 0 ; i < elements.length ; i++){
+          for(let i = 0 ; i < elements.length-1 ; i++){
             let item = elements.item(i);
             obj[item.name] = item.value;
           }
