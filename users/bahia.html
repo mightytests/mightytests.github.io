@@ -1,4 +1,20 @@
 <head>
+  <style>
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #4CAF50;} /* Green */
+.button2 {background-color: #008CBA;} /* Blue */
+</style>
   <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -42,7 +58,7 @@
     <label for="data_ingresso">Data de Ingresso:</label>
     <input type="date" id="data_ingresso" name="data_ingresso"><br>
     
-    <button type="button" class="button" onclick="datalayer.push({'curso' : 'curso' , 'preco' : 'preco' , 'modalidade' : 'modalidade' , 'dataDeIngresso' : 'data_ingresso' , 
-                                                 'periodo' : 'periodo'})>Submit</button>
+    <button type="button" class="button button1" onclick="datalayer.push({'curso' : 'curso' , 'preco' : 'preco' , 'modalidade' : 'modalidade' , 'dataDeIngresso' : 'data_ingresso' , 
+                                                 'periodo' : 'periodo'})">Submit</button>
   </form>
 </body>
