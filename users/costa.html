@@ -27,6 +27,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-T987JD6');</script>
 <!-- End Google Tag Manager -->
+  <script>
+    formSubmit = () =>{
+      let form = document.getElementById("form")
+      console.log(form)
+    }
+  </script>
 </head>
 
 <body>
@@ -35,7 +41,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   
-  <form>
+  <form onsubmit="formSubmit()" id="form">
     <label for="Curso">Curso:</label><br>
     <select name="curso" id="curso">
       <option value="Sistemas de Informação">Sistemas de Informação</option>
