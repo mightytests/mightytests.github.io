@@ -29,13 +29,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
   <script>
     formSubmit = () =>{
-          var elements = document.getElementById("form").elements;
-    var obj ={};
-    for(var i = 0 ; i < elements.length ; i++){
-        var item = elements.item(i);
-        obj[item.name] = item.value;
-    }
-      console.log(obj)
+          const elements = document.getElementById("form").elements;
+          let obj ={};
+          for(let i = 0 ; i < elements.length ; i++){
+            let item = elements.item(i);
+            obj[item.name] = item.value;
+          }
+          console.log(obj)
     }
   </script>
 </head>
