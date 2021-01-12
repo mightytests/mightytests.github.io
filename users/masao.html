@@ -29,8 +29,13 @@
 		<title> Guilherme Masao Tsuyukubo </title>
 		<script>
 			function sendInfo(){
-				const form = document.getElementById("1");
-				console.log(form);
+				const curso = curso.value;
+				const preco = preco.value;
+				const periodo = document.querySelector('input[name="periodo"]:checked').value;
+				const modalidade = document.querySelector('input[name="modalidade"]:checked').value;
+				const ingresso = data_ingresso.value;
+				
+				dataLayer.push({'Curso': curso, 'Periodo' : periodo, 'Modalidade' : modalidade, 'Ingresso': ingresso})
 			}
 		</script>
 	</head>
