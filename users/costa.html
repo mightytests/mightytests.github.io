@@ -35,23 +35,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   
-<h1>Olá</h1>
-<button class="test button">Button 1</button>
-<a id="link" href="www.google.com" >Link 2</a>
- <form>
-  <label for="fname">Nome</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for="lname">Sobrenome</label><br>
-  <input type="text" id="lname" name="lname">
- <label for="cars">Escolha seu carro</label>
-
-<select name="cars" id="cars">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
-</select> 
-<input type="submit" id"Submit" value='Submit'>
-</form> 
+  <form>
+    <label for="Curso">Curso:</label><br>
+    <select name="curso" id="curso">
+      <option value="Sistemas de Informação">Sistemas de Informação</option>
+      <option value="Ciência da Computação">Ciência da Computação</option><br>
+      <option value="Direito">Direito</option><br>
+      <option value="Física">Física</option><br>
+    </select><br>
+    
+    <label for="preco">Preco:</label><br>
+    <input type="text" id="preco" name="preco"><br>
+    
+    <label for="periodo">Períodos:</label><br>
+    <input type="radio" id="manha" name="periodo" value="manha">
+    <label for="manha">Manha</label><br>
+    <input type="radio" id="tarde" name="periodo" value="tarde">
+    <label for="tarde">Tarde</label><br>
+    <input type="radio" id="other" name="periodo" value="noite">
+    <label for="noite">Noite</label><br>
+    
+    <label for="modalidade">Modalidade:</label><br>
+    <input type="radio" id="ead" name="modalidade" value="ead">
+    <label for="ead">EAD</label><br>
+    <input type="radio" id="presencial" name="modalidade" value="presencial">
+    <label for="presencial">Presencial</label><br>
+    
+    <label for="data_ingresso">Data de Ingresso:</label>
+    <input type="date" id="data_ingresso" name="data_ingresso"><br>
+    
+    <input type="submit" value="Submit">
+  </form>
 </body>
 
