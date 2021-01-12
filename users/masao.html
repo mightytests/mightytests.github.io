@@ -35,7 +35,9 @@
 				const modalidade = document.querySelector('input[name="modalidade"]:checked').value;
 				const ingresso = data_ingresso.value;
 				
-				dataLayer.push({'Curso': curso, 'Periodo' : periodo, 'Modalidade' : modalidade, 'Ingresso': ingresso})
+				const teste = {'curso': curso, 'periodo' : periodo, 'modalidade' : modalidade, 'ingresso': ingresso};
+				console.log(teste);
+				dataLayer.push({'curso': curso, 'periodo' : periodo, 'modalidade' : modalidade, 'ingresso': ingresso})
 			}
 		</script>
 	</head>
