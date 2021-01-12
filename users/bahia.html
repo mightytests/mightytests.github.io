@@ -8,18 +8,6 @@
     })(window,document,'script','dataLayer','GTM-WZ9Q369');</script>
     <script> dataLayer = [];</script>
   <!-- End Google Tag Manager -->
-	 <script>
-    			formSubmit = () =>{
-          			const elements = document.getElementById("form").elements;
-          			let obj ={};
-          			for(let i = 0 ; i < elements.length-1 ; i++){
-            			let item = elements.item(i);
-				    obj[item.name] = item.value;
-				  }
-				  console.log(obj)
-				  dataLayer.push(obj);
-			    }
-	</script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -54,9 +42,8 @@
     
     			<label for="data_ingresso">Data de Ingresso:</label>
     				<input type="date" id="ingresso" name="ingresso"><br>
-			<a class="button-primary" onclick="dataLayer.push({'curso' : 'curso'});">Push</a>
+			<a class="button-primary" onclick="dataLayer.push({'curso' : 'curso', 'periodo' : 'periodo', 'modalidade' : 'modalidade', 'dataDeIngresso' : 'data_ingresso', 'preco' : 'preco'});">Push</a>
     
-    			<input type="submit" value="Submit">
     
   		</form>
 </body>
