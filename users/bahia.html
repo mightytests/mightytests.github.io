@@ -5,6 +5,7 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WZ9Q369');</script>
+    <script> datalayer = [];</script>
   <!-- End Google Tag Manager -->
 </head>
 <body>
@@ -41,6 +42,7 @@
     <label for="data_ingresso">Data de Ingresso:</label>
     <input type="date" id="data_ingresso" name="data_ingresso"><br>
     
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" onclick="datalayer.push({'curso' : 'curso' , 'preco' : 'preco' , 'modalidade' : 'modalidade' , 'dataDeIngresso' : 'data_ingresso' , 
+                                                 'periodo' : 'periodo'})">
   </form>
 </body>
