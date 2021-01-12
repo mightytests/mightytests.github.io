@@ -14,7 +14,11 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZ9Q369"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  		<form onsubmit="formSubmit()" id="form">
+  		<form onsubmit=						   "dataLayer.push({'curso': curso.value,
+							   		   'periodo': document.querySelector('input[name=\'periodo\']:checked').value, 
+									   'modalidade': document.querySelector('input[name=\'modalidade\']:checked').value, 
+									   'dataDeIngresso': ingresso.value, 
+									   'preco': preco.value})" id="form">
    		 <label for="Curso">Curso:</label><br>
     			<select name="curso" id="curso">
       				<option value="Sistemas de Informação">Sistemas de Informação</option>
@@ -42,12 +46,6 @@
     
     			<label for="data_ingresso">Data de Ingresso:</label>
     				<input type="date" id="ingresso" name="ingresso"><br>
-			<a class="button-primary" href="../bahia.html" onclick="dataLayer.push({'curso': curso.value,
-							   		   'periodo': document.querySelector('input[name=\'periodo\']:checked').value, 
-									   'modalidade': document.querySelector('input[name=\'modalidade\']:checked').value, 
-									   'dataDeIngresso': ingresso.value, 
-									   'preco': preco.value})">Push</a>
-    
-    
+			<input type="submit" value="Submit">
   		</form>
 </body>
