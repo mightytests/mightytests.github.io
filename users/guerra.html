@@ -10,11 +10,9 @@
     <!-- gtag('config', 'G-WWBT750N11'); GA4 Andre Guerra -->
     <!-- gtag('config', 'UA-186907720-1'); UA Andre Guerra -->
       
-    function buttonClick() {
-      gtag('event', 'TestButton', {
-        'event_category': "button press",
-        'event_label': "test button"
-      })
+    function sendInfo() {
+      const form = document.getElementById("1")
+      console.log()
     }
   </script>
   <!-- Google Tag Manager -->
@@ -62,7 +60,7 @@
     <label for="data_ingresso">Data de Ingresso:</label>
     <input type="date" id="data_ingresso" name="data_ingresso"><br>
 
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" onclick=>
   </form>
 </body>
 </html>
