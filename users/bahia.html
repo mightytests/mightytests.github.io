@@ -8,17 +8,27 @@
     })(window,document,'script','dataLayer','GTM-WZ9Q369');</script>
     <script> dataLayer = [];</script>
   <!-- End Google Tag Manager -->
+	<script>
+			sendForm = () =>{
+				  const elements = document.getElementById("form").elements;
+				  let obj ={};
+				  for(let i = 0 ; i < elements.length-1 ; i++){
+					let item = elements.item(i);
+					obj[item.name] = item.value;
+				  }
+				  console.log(obj);
+				  dataLayer.push(obj);
+			}
+
+			console.log("teste");
+	</script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZ9Q369"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  		<form onsubmit=						   "dataLayer.push({'curso': curso.value,
-							   		   'periodo': document.querySelector('input[name=\'periodo\']:checked').value, 
-									   'modalidade': document.querySelector('input[name=\'modalidade\']:checked').value, 
-									   'dataDeIngresso': ingresso.value, 
-									   'preco': preco.value})" id="form">
+  		<form onsubmit="SendForm()" id="form">
    		 <label for="Curso">Curso:</label><br>
     			<select name="curso" id="curso">
       				<option value="Sistemas de Informação">Sistemas de Informação</option>
