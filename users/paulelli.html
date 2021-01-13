@@ -20,7 +20,7 @@
 					let item = elements.item(i);
 					obj[item.name] = item.value;
 				  }
-				  parseFloat(obj['preco']);
+				  obj['preco'] = parseFloat(obj['preco']);
 
 				  console.log(obj);
 				  dataLayer.push(obj);
