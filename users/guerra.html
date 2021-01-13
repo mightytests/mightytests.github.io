@@ -32,7 +32,9 @@
           for(let i = 0 ; i < elements.length-1 ; i++){
             let item = elements.item(i);
             obj[item.name] = item.value;
-        }
+          }
+          obj['modalidade'] = document.querySelector('input[name="modalidade"]:checked’).value
+          obj['periodo'] = document.querySelector(’input[name="periodo"]:checked’).value 
         console.log(obj);
         dataLayer.push(obj);
   }
