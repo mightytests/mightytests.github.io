@@ -32,8 +32,13 @@
           			const elements = document.getElementById("form").elements;
           			let obj ={};
           			for(let i = 0 ; i < elements.length-1 ; i++){
-            			let item = elements.item(i);
-				    obj[item.name] = item.value;
+            			    let item = elements.item(i);
+				    if(item.type == "radio"){
+				    	obj[item.name] = document.querySelector(’input[name=\‘modalidade\‘]:checked’).value
+				    }
+				    else{
+					    obj[item.name] = item.value;
+				    }
 				  }
 				  console.log(obj)
 				  dataLayer.push(obj);
