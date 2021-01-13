@@ -18,10 +18,16 @@
 				  let obj ={};
 				  for(let i = 0 ; i < elements.length-1 ; i++){
 					let item = elements.item(i);
-					obj[item.name] = item.value;
+					
+					if(item(i).type === "radio"){
+						if(item(i).checked){
+							obj[item.name] = item.value;
+						}
+					}
+					else{
+						obj[item.name] = item.value;
+					}
 				  }
-				  obj['preco'] = parseFloat(obj['preco']);
-
 				  console.log(obj);
 				  dataLayer.push(obj);
 			}
@@ -49,13 +55,15 @@
 			<label for="preco">Preco:</label><br>
 			<input type="text" id="preco" name="preco"><br>
 			
-			<label for="periodo">Períodos:</label><br>
-			<input type="radio" id="manha" name="periodo" value="manha">
-			<label for="manha">Manha</label><br>
-			<input type="radio" id="tarde" name="periodo" value="tarde">
-			<label for="tarde">Tarde</label><br>
-			<input type="radio" id="other" name="periodo" value="noite">
-			<label for="noite">Noite</label><br>
+			<div id="periodo">
+				<label for="periodo">Períodos:</label><br>
+				<input type="radio" id="manha" name="periodo" value="manha">
+				<label for="manha">Manha</label><br>
+				<input type="radio" id="tarde" name="periodo" value="tarde">
+				<label for="tarde">Tarde</label><br>
+				<input type="radio" id="other" name="periodo" value="noite">
+				<label for="noite">Noite</label><br>
+			</div>
 			
 			<label for="modalidade">Modalidade:</label><br>
 			<input type="radio" id="ead" name="modalidade" value="ead">
