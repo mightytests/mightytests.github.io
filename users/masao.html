@@ -35,10 +35,10 @@
             			    let item = elements.item(i);
 				    if(item.type == "radio"){
 					    if(item.name == "modalidade"){
-						item.value = document.querySelector('input[name=\'modalidade\']:checked').value;
+						obj[item.name] = document.querySelector('input[name=\'modalidade\']:checked').value;
 					    }
 					    else{
-						item.value = document.querySelector('input[name=\'presencial\']:checked').value;
+						obj[item.name] = document.querySelector('input[name=\'presencial\']:checked').value;
 					    }
 				    }
 				    obj[item.name] = item.value;	
