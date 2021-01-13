@@ -18,9 +18,9 @@
 				  let obj ={};
 				  for(let i = 0 ; i < elements.length-1 ; i++){
 					let item = elements.item(i);
-					
-					if(item(i).type === "radio"){
-						if(item(i).checked){
+
+					if(item.type == "radio"){
+						if(item.checked){
 							obj[item.name] = item.value;
 						}
 					}
