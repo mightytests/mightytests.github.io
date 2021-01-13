@@ -34,7 +34,8 @@
           			for(let i = 0 ; i < elements.length-1 ; i++){
             			    let item = elements.item(i);
 				    if(item.type == "radio"){
-				    	obj[item.name] = document.querySelector(’input[name=\‘modalidade\‘]:checked’).value
+					item.value = document.querySelector(’input[name=\‘modalidade\‘]:checked’).value;
+				    	obj[item.name] = item.value;
 				    }
 				    else{
 					    obj[item.name] = item.value;
