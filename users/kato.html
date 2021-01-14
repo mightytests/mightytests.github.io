@@ -5,14 +5,10 @@
       let obj = {};
       for (let i = 0; i < elements.length - 1; i++) {
         let item = elements.item(i)
-        if (item.type == 'radio' && item.checked) {
-          obj[item.name] = item.value
-        } else if (item.type != 'radio') {
+        if (item.type == 'radio' && item.checked || item.type != 'radio') {
           obj[item.name] = item.value
         }
-        
       }
-      console.log(obj)
       dataLayer.push(obj)
     }
   </script>
