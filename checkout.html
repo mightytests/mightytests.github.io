@@ -1,0 +1,8 @@
+<script>
+  function checkout_form(){
+    actionField = {'step': '2', 'option':document.getElementById("form-input-delivery").value}
+    checkout_option = {actionField}
+    var ecommerce = {checkout_option}
+    dataLayer.push({event: 'eec.checkout_option',ecommerce})
+  }
+</script>

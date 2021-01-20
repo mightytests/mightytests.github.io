@@ -1,0 +1,58 @@
+<script>
+function names() {
+  var names = document.querySelectorAll("div#confirmation-anchor > div.product-info-rectangle-row > div.product-info-rectangle-items-lable")
+  var arr = []
+  for (var i = 0; i < names.length - 1; i += 2) {
+    arr.push(names[i].innerText)
+  }
+  return arr
+}
+
+function prices() {
+  var prices = document.querySelectorAll("div#confirmation-anchor > div.product-info-rectangle-row > div.product-info-rectangle-items-lable")
+  var arr = []
+  for (var i = 1; i < prices.length; i += 2) {
+    var price = prices[i].innerText
+    arr.push(price.replace(/[^0-9\.-]+/g, ""))
+  }
+  return arr
+}
+
+function quantity() {
+  var qt = document.querySelectorAll("div#confirmation-anchor > div.product-info-rectangle-row > div.product-info-rectangle-items-count")
+  var arr = []
+  for (var i = 0; i < qt.length; i++) {
+    arr.push(qt[i].innerText.replace(/[^0-9\.-]+/g, ""))
+  }
+  return arr
+}
+function t_id() {
+  return document.querySelector("div#order-number-anchor > div.product-info-rectangle-row > div.product-info-rectangle-items-lable").innerText.replace(/[^0-9\.-]+/g, "")
+}
+function t_value() {
+  var total = document.querySelector("div#grandtotal").innerText
+  return total.replace(/[^0-9\.-]+/g, "")
+}
+
+function t_tax() {
+  var total = document.querySelector("div#totaltax").innerText
+  return total.replace(/[^0-9\.-]+/g, "")
+}
+
+function confirmation(){
+  var product = {}
+  var products = []
+  var name_table = names()
+  var price_table = prices()
+  var quantity_table = quantity()
+  for (var i= 0; i < name_table.length; i++){
+    product = {'quantity': quantity_table[i], 'name': name_table[i], 'category':'Shop Items', 'price':price_table[i]}
+    products.push(product)
+  }
+  actionField = {'id':t_id(),'revenue':t_value(), 'tax':t_tax()}
+  purchase = {actionField,products}
+  var ecommerce = {'currencyCode':'USD',purchase}
+  dataLayer.push({event: 'eec.purchase',ecommerce})
+}
+
+</script>
