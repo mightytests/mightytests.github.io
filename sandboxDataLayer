@@ -1,4 +1,6 @@
 <script>
+
+
   function names() {
     var titles = document.querySelectorAll("div.product-container-itembox-description-title")
     var names = []
@@ -16,19 +18,19 @@
     for (var i = 0; i < prices.length; i++) {
       var price = prices[i].innerText
       arr.push(price.replace(/[^0-9\.-]+/g, ""))
-    } 
+    }
     return arr
   }
 
-  
-  
+
+
   function ecommerce_impressions() {
     var product = {}
     var impressions = [{}]
     name_table = names()
     var price_table = prices()
     for (var i= 0; i < price_table.length; i++){
-      product = {'id':1234+i , 'price': price_table[i], 'name': name_table[i], 'position':i+1}
+      product = {'id':1234+i , 'price': price_table[i], 'name': name_table[i], 'position':i+1, 'list':name_table[i].split(' ',1)}
       impressions.push(product)
     }
     impressions.splice(0,1)
@@ -40,5 +42,49 @@
     var ecommerce = ecommerce_impressions()
     dataLayer.push({event: 'eec.impressionView',ecommerce})
   }
+</script>
 
+<script>
+  function ecommerce_views(){
+    var product = {}
+    var products = []
+    var detail = []
+    var name_table = names()
+    var price_table = prices()
+    for (var i= 0; i < price_table.length; i++){
+      product = {'id':1234+i , 'price': price_table[i], 'name': name_table[i], 'category':name_table[i].split(' ',1)}
+      products.push(product)
+    }
+    actionField = {'list': 'Shop Items'}
+    var ecommerce = {actionField,products}
+    return ecommerce
+  }
+  function ecommerce_detail_views(){
+    var ecommerce = ecommerce_views()
+    dataLayer.push({event: 'eec.detail',ecommerce})
+  }
+</script>
+
+<script>
+  function id_buttons(){
+    var ids = document.querySelectorAll(".product-container-itembox-description-add-button")
+    var ids_table = []
+    for (var i = 0; i < ids.length; i++) {
+      var text = ids[i].id
+      ids_table.push(text)
+    }
+    return ids_table
+  }
+
+  function add_to_cart(object_added_id){
+    var name_table = names()
+    var button_id_table = id_buttons()
+    var n_position = button_id_table.indexOf(object_added_id)
+    var actionField = {'list': 'Shop Items'}
+    var product = {'id':1234+n_position, 'name':name_table[n_position], 'quantity':1, 'category':name_table[n_position].split(' ',1)}
+    var products = [product]
+    var add = {actionField,products}
+    var ecommerce = {add}
+    dataLayer.push({event: 'eec.add',ecommerce})
+  }
 </script>
