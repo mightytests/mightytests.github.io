@@ -1,13 +1,76 @@
 <!DOCTYPE html>
 <html>
+<head>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TVVHZC4');</script>
+</head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVVHZC4"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<script>
+function function1() {
+	alert("Thanks");
+	dataLayer.push({
+		'ecommerce': {
+			'detail': {
+				'actionField': {'list': 'Apparel Gallery'},    // 'detail' actions have an optional list property.
+				'products': [{
+					'name': 'Triblend Android T-Shirt',         // Name or ID is required.
+					'id': '12345',
+					'price': '15.25',
+					'brand': 'Google',
+					'category': 'Clothing/T-Shirts/Triblend',
+					'variant': 'Gray'
+				 }]
+			 }
+		 }
+	});
+}
+
+function function2() {
+	alert("Thanks");
+	dataLayer.push({
+		'ecommerce': {
+			'detail': {
+				'actionField': {'list': 'Apparel Gallery'},    // 'detail' actions have an optional list property.
+				'products': [{
+					'name': 'Duoblend Android T-Shirt',         // Name or ID is required.
+					'id': '12346',
+					'price': '17.25',
+					'brand': 'Google',
+					'category': 'Clothing/T-Shirts/Duoblend',
+					'variant': 'Yellow'
+				 }]
+			 }
+		 }
+	});
+}
+
+function function3() {
+	alert("Thanks");
+	dataLayer.push({
+		'ecommerce': {
+			'detail': {
+				'actionField': {'list': 'Apparel Gallery'},    // 'detail' actions have an optional list property.
+				'products': [{
+					'name': 'Monoblend Android Shorts',         // Name or ID is required.
+					'id': '12347',
+					'price': '25.25',
+					'brand': 'Google',
+					'category': 'Clothing/Shorts/Monoblend',
+					'variant': 'Green'
+				 }]
+			 }
+		 }
+	});
+}
+	
+</script>
+  
 <h1>Category Test</h1>
 
 <button type="button" onclick="function1()">Category 1</button>
