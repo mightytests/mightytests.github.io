@@ -149,9 +149,28 @@ function function7() {
 	});
 	alert("Thanks");
 }	
+function function8() {
+	
+	dataLayer.push({event: 'eec.addToCart',
+		'ecommerce': {
+			'add': {
+				'products': [{
+					'name': 'Triblend G00gle T-Shirt',         // Name or ID is required.
+					'id': '12352',
+					'price': '15.25',
+					'brand': 'Google',
+					'quantity': 1,
+					'category': 'Clothing/T-Shirts/Triblend',
+					'variant': 'Gray'
+				 }]
+			 }
+		 }
+	});
+	alert("Thanks");
+}	
 </script>
   
-<h1>Category Test V1.2</h1>
+<h1>Category Test V1.3</h1>
 
 <button type="button" onclick="function1()">Clothing/T-Shirts/Triblend</button>
 <button type="button" onclick="function2()">Clothing/T-Shirts/Duoblend</button>
@@ -160,6 +179,8 @@ function function7() {
 <button type="button" onclick="function5()">Items/Google/Clothing/T-Shirts/Duoblend</button>
 <button type="button" onclick="function6()">BreakerSquared/Breaker/Items/Google/Clothing/T-Shirts/Duoblend</button>
 <button type="button" onclick="function7()">Clothing/T-Shirts/Triblend/Buttons/LongSleeves</button>
+<button type="button" onclick="function8()">Clothing/T-Shirts/Triblend</button>
+
 </body>
 </html>
 
