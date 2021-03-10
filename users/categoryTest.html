@@ -71,6 +71,65 @@ function function3() {
 	alert("Thanks");
 }
 	
+function function4() {
+	
+	dataLayer.push({event: 'eec.addToCart',
+		'ecommerce': {
+			'add': {
+				'products': [{
+					'name': 'Triblend Kitkat T-Shirt',         // Name or ID is required.
+					'id': '12348',
+					'price': '15.25',
+					'brand': 'Google',
+					'quantity': 1,
+					'category': 'Items/Google/Clothing/T-Shirts/Triblend',
+					'variant': 'Gray'
+				 }]
+			 }
+		 }
+	});
+	alert("Thanks");
+}
+
+function function5() {
+	
+	dataLayer.push({event: 'eec.addToCart',
+		'ecommerce': {
+			'add': {
+				'products': [{
+					'name': 'Duoblend Kitkat T-Shirt',         // Name or ID is required.
+					'id': '12349',
+					'price': '15.25',
+					'brand': 'Google',
+					'quantity': 1,
+					'category': 'Items/Google/Clothing/T-Shirts/Duoblend',
+					'variant': 'Gray'
+				 }]
+			 }
+		 }
+	});
+	alert("Thanks");
+}
+
+function function6() {
+	
+	dataLayer.push({event: 'eec.addToCart',
+		'ecommerce': {
+			'add': {
+				'products': [{
+					'name': 'ExtraBlend Category Breaker Android T-Shirt',         // Name or ID is required.
+					'id': '12350',
+					'price': '15.25',
+					'brand': 'Google',
+					'quantity': 1,
+					'category': 'BreakerSquared/Breaker/Items/Google/Clothing/T-Shirts/Duoblend',
+					'variant': 'Gray'
+				 }]
+			 }
+		 }
+	});
+	alert("Thanks");
+}	
 </script>
   
 <h1>Category Test V0.9</h1>
@@ -78,6 +137,9 @@ function function3() {
 <button type="button" onclick="function1()">Clothing/T-Shirts/Triblend</button>
 <button type="button" onclick="function2()">Clothing/T-Shirts/Duoblend</button>
 <button type="button" onclick="function3()">Clothing/Shorts/Triblend</button>
+<button type="button" onclick="function4()">Items/Google/Clothing/T-Shirts/Triblend</button>
+<button type="button" onclick="function5()">Items/Google/Clothing/T-Shirts/Duoblend</button>
+<button type="button" onclick="function6()">BreakerSquared/Breaker/Items/Google/Clothing/T-Shirts/Duoblend</button>
 </body>
 </html>
 
