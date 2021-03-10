@@ -129,6 +129,25 @@ function function6() {
 		 }
 	});
 	alert("Thanks");
+}
+function function7() {
+	
+	dataLayer.push({event: 'eec.addToCart',
+		'ecommerce': {
+			'add': {
+				'products': [{
+					'name': 'Extra Category Android T-Shirt',         // Name or ID is required.
+					'id': '12351',
+					'price': '15.25',
+					'brand': 'Google',
+					'quantity': 1,
+					'category': 'Clothing/T-Shirts/Triblend/Buttons/LongSleeves',
+					'variant': 'Gray'
+				 }]
+			 }
+		 }
+	});
+	alert("Thanks");
 }	
 </script>
   
@@ -140,6 +159,7 @@ function function6() {
 <button type="button" onclick="function4()">Items/Google/Clothing/T-Shirts/Triblend</button>
 <button type="button" onclick="function5()">Items/Google/Clothing/T-Shirts/Duoblend</button>
 <button type="button" onclick="function6()">BreakerSquared/Breaker/Items/Google/Clothing/T-Shirts/Duoblend</button>
+<button type="button" onclick="function7()">Clothing/T-Shirts/Triblend/Buttons/LongSleeves</button>
 </body>
 </html>
 
