@@ -13,7 +13,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 function function1() {
-	alert("Thanks");
+	
 	dataLayer.push({event: 'eec.addToCart',
 		'ecommerce': {
 			'detail': {
@@ -29,10 +29,11 @@ function function1() {
 			 }
 		 }
 	});
+	alert("Thanks");
 }
 
 function function2() {
-	alert("Thanks");
+
 	dataLayer.push({event: 'eec.addToCart',
 		'ecommerce': {
 			'detail': {
@@ -48,10 +49,10 @@ function function2() {
 			 }
 		 }
 	});
+	alert("Thanks");
 }
 
 function function3() {
-	alert("Thanks");
 	dataLayer.push({event: 'eec.addToCart',
 		'ecommerce': {
 			'detail': {
@@ -61,21 +62,22 @@ function function3() {
 					'id': '12347',
 					'price': '25.25',
 					'brand': 'Google',
-					'category': 'Clothing/Shorts/Monoblend',
+					'category': 'Clothing/Shorts/Triblend',
 					'variant': 'Green'
 				 }]
 			 }
 		 }
 	});
+	alert("Thanks");
 }
 	
 </script>
   
 <h1>Category Test V0.9</h1>
 
-<button type="button" onclick="function1()">Category 1</button>
-<button type="button" onclick="function2()">Category 2</button>
-<button type="button" onclick="function3()">Category 3</button>
+<button type="button" onclick="function1()">Clothing/T-Shirts/Triblend</button>
+<button type="button" onclick="function2()">Clothing/T-Shirts/Duoblend</button>
+<button type="button" onclick="function3()">Clothing/Shorts/Triblend</button>
 </body>
 </html>
 
