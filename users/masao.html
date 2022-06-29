@@ -18,7 +18,7 @@
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
 		
-		<h1> Clique aqui Bot </h1>
+		<h1 onclick="randomNumber()"> Clique aqui Bot </h1>
 		
 		<form onsubmit="formSubmit()" id="form">
    		 <label for="Curso">Curso:</label><br>
@@ -52,8 +52,13 @@
     			<input type="submit" id="teste" value="Submit">
 			
 			<button class="btn-home"><a href="../index.html">Go back home</a></button>
-    
-  		</form>
+    		</form>
+		<script>
+			window.dataLayer.push({
+				event: 'id_user',
+				id_user: Math.floor(Math.random() * 100000)
+			})
+		</script>
 	</body>
 </html>
 
