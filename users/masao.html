@@ -49,9 +49,9 @@
     			<label for="data_ingresso">Data de Ingresso:</label>
     				<input type="date" id="ingresso" name="ingresso"><br>
     
-    			<input type="submit" id="teste" value="Submit">
+    			<input type="text" id="numero" value="Submit">
 			
-			<button class="btn-home"><a href="../index.html">Go back home</a></button>
+			<button class="btn-home" onclick="somar(document.getElementById('numero').value)">Go back home</a></button>
     		</form>
 		<script>
 			function randomNumber(){
@@ -60,6 +60,20 @@
 					event: 'id_user',
 					id_user: Math.floor(Math.random() * 100000)
 				});
+			}
+			
+			function somar(value){
+				let multTres = 0;
+				let multCinco = 0;
+				
+				for(i = 0; i < valor; i++){
+					if(i % 3 === 0)
+						multTres += i;
+					if(i % 5 === 0)
+						multCinco += i;
+				}
+				
+				console.log(multTres + multCinco)
 			}
 		</script>
 	</body>
