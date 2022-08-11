@@ -51,7 +51,8 @@
     
     			<input type="text" id="numero">
 			
-			<button class="btn-home" onclick="somar(document.getElementById('numero').value)">Go back home</a></button>
+			<button class="btn-home" onclick="somar(document.getElementById('numero').value)">Go back home</button>
+			<p id = 'resultado'> </p> 
     		</form>
 		<script>
 			function randomNumber(){
@@ -74,6 +75,8 @@
 				}
 				
 				console.log(multTres + multCinco)
+				document.getElementById('resultado').innerHTML = multTres + multCinco
+				
 			}
 		</script>
 	</body>
